@@ -6,18 +6,21 @@ import MyNavBar from './Componants/MyNavBar';
 import About from './Componants/About'
 import Contact from './Componants/Contact'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MyFoem from './Componants/MyFoem';
+
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <MyFoem/>
+      {/* <BrowserRouter>
         <MyNavBar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
