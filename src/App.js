@@ -7,12 +7,14 @@ import About from './Componants/About'
 import Contact from './Componants/Contact'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MyFoem from './Componants/MyFoem';
+import MyStudentList from './Componants/MyStudentList';
 
 
 function App() {
   return (
     <div>
-      <MyFoem/>
+      {/* <MyFoem/> */}
+      <MyStudentList/>
       {/* <BrowserRouter>
         <MyNavBar />
         <Routes>
