@@ -1,28 +1,41 @@
 import React from 'react'
 import { Button, Card, Col, Row, Table } from 'react-bootstrap'
-
+import icpy from '../images/ic_py.png'
+import icjava from '../images/java.png'
+import icjs from '../images/js.png'
+import ickt from '../images/kt.png'
 
 const MyStudentList = () => {
     const stdList = [
         {
             stdid: 1,
             stdname: "Ashish",
-            stdmarks: 75
+            stdmarks: 75,
+            stdpic: icjs
         },
         {
             stdid: 2,
             stdname: "Pawan",
-            stdmarks: 72
+            stdmarks: 72,
+            stdpic: icjava
         },
         {
             stdid: 3,
             stdname: "Sam",
-            stdmarks: 85
+            stdmarks: 85,
+            stdpic: ickt
         },
         {
             stdid: 4,
             stdname: "Dhiraj",
-            stdmarks: 85
+            stdmarks: 85,
+            stdpic: icpy
+        },
+        {
+            stdid: 4,
+            stdname: "Dhiraj",
+            stdmarks: 85,
+            stdpic: icpy
         },
     ]
 
@@ -54,8 +67,9 @@ const MyStudentList = () => {
                     {
                         stdList.map((std) => {
                             return (
-                                <Col>
+                                <Col sm={12} lg={4} md={6}>
                                     <Card>
+                                        <Card.Img className='crdimg' src={std.stdpic} />
                                         <Card.Header>
                                             Student
                                         </Card.Header>
