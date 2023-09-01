@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
+
 
 const MyFoem = () => {
     const [counter, setcounter] = useState(0)
@@ -8,6 +10,8 @@ const MyFoem = () => {
     const [gender, setGender] = useState("")
 
     var names = ["Ashish", "Pawn", "Dhiraj"]
+
+    const { id } = useParams();
 
     function incre() {
         setcounter(counter + 1)
@@ -38,6 +42,7 @@ const MyFoem = () => {
             </Form>
             <button>Submit</button>
             <p>{firstName + " " + lastName + " " + gender}</p>
+            <h1>{id}</h1>
         </div>
     )
 }

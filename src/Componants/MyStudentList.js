@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, Col, Row, Table } from 'react-bootstrap'
+import {Button, Card, Col, Row, Table } from 'react-bootstrap'
 import icpy from '../images/ic_py.png'
 import icjava from '../images/java.png'
 import icjs from '../images/js.png'

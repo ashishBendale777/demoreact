@@ -8,21 +8,24 @@ import Contact from './Componants/Contact'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MyFoem from './Componants/MyFoem';
 import MyStudentList from './Componants/MyStudentList';
-
+import { FaAmilia } from 'react-icons/fa'
+import TopBar from './Componants/TopBar';
 
 function App() {
   return (
     <div>
       {/* <MyFoem/> */}
-      <MyStudentList/>
-      {/* <BrowserRouter>
+        {/* <TopBar/> */}
+      {/* <MyStudentList /> */}
+      <BrowserRouter>
         <MyNavBar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/myform/:id' element={<MyFoem />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
