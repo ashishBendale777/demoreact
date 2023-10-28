@@ -8,15 +8,17 @@ const Home = () => {
 
   const [inputValue, setInputValue] = useState("");
   const [inputValue2, setInputValue2] = useState("");
+  
   const [selectedColor, setColor] = useState("");
 
-
   const count = useRef(0);
+
 
   const h1ref = useRef(0);
 
   useEffect(() => {
-    h1ref.current.style.color = selectedColor;
+    h1ref.current.style.textsize = selectedColor;
+  
   }, [selectedColor]);
 
   return (
@@ -34,12 +36,13 @@ const Home = () => {
       />
 
       <Form.Select onChange={(e) => setColor(e.target.value)}>
-        <option value="red">RED</option>
-        <option value="green">GREEN</option>
-        <option value="blue">BLUE</option>
+        <option value="20">RED</option>
+        <option value="30">GREEN</option>
+        <option value="50">BLUE</option>
       </Form.Select>
 
-      <h1 ref={h1ref}>Render</h1>
+      <p ref={h1ref}>Render</p>
+      <p onClick={()=>alert("hi..")}>jhsd ajshdjhasjdkhajdhjadk</p>
     </>
   )
 }

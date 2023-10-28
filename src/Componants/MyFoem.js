@@ -5,9 +5,9 @@ import { useParams } from 'react-router-dom'
 
 const MyFoem = () => {
     const [counter, setcounter] = useState(0)
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [gender, setGender] = useState("")
+    const [firstName, setFirstName] = useState("Ashish")
+    const [lastName, setLastName] = useState("Bendale")
+    const [gender, setGender] = useState("Male")
 
     var names = ["Ashish", "Pawn", "Dhiraj"]
 
@@ -29,7 +29,10 @@ const MyFoem = () => {
             <Form>
                 <Form.Group>
                     <Form.Label>First Name</Form.Label>
-                    <Form.Control type='Text' placeholder='Enter Name' onChange={(e) => setFirstName(e.target.value)} />
+                    <Form.Control type='Text' 
+                    value={firstName}
+                    placeholder='Enter Name'
+                        onChange={(e) => setFirstName(e.target.value)} />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Last Name</Form.Label>

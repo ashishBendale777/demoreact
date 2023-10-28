@@ -10,15 +10,17 @@ import MyFoem from './Componants/MyFoem';
 import MyStudentList from './Componants/MyStudentList';
 import { FaAmilia } from 'react-icons/fa'
 import TopBar from './Componants/TopBar';
+import MyOffcanvas from './Componants/MyOffcanvas';
 
 function App() {
   return (
     <div>
       {/* <MyFoem/> */}
-        {/* <TopBar/> */}
+      {/* <TopBar/> */}
       {/* <MyStudentList /> */}
+
       <BrowserRouter>
-        <MyNavBar />
+        <MyOffcanvas></MyOffcanvas>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
