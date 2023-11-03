@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 
 import { useState, useEffect, useRef } from "react";
+import { MyButton } from './MyButton';
 
 const Home = () => {
 
@@ -43,6 +44,7 @@ const Home = () => {
 
       <p ref={h1ref}>Render</p>
       <p onClick={()=>alert("hi..")}>jhsd ajshdjhasjdkhajdhjadk</p>
+      <MyButton label="Home OK"/>
     </>
   )
 }

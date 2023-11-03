@@ -1,8 +1,12 @@
 import React from 'react'
+import { MyButton } from './MyButton'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>About
+      <MyButton label="Ab OK" onClick={()=>alert("Abouy")}/>
+    </div>
+
   )
 }
 

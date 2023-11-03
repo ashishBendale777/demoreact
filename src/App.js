@@ -20,7 +20,7 @@ function App() {
       {/* <MyStudentList /> */}
 
       <BrowserRouter>
-        <MyOffcanvas></MyOffcanvas>
+        <MyOffcanvas/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
