@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div>
       <MyFoem />
-      <MyButton label="Contact OK" onClick={() => alert("Contact Clik")} />
+      <MyButton style="mbtn" label="Contact OK" onClick={() => alert("Contact Clik")} />
     </div>
 
   )
