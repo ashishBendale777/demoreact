@@ -1,10 +1,12 @@
 import React from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-
+import { register } from '../reduxwork/UserSlice'
+import { useDispatch } from 'react-redux'
 
 const Login = () => {
     const navi = useNavigate()
+    const dispatcher = useDispatch()
 
     return (
         <div>
@@ -21,6 +23,11 @@ const Login = () => {
                         </Col>
                     </Row>
                     <Button onClick={() => {
+                        const user = {
+                            UserName: "Ashish",
+                            UserPass: "asdf"
+                        }
+                        dispatcher(register(user))
                         navi('/app')
                     }}>Login</Button>
                 </Form>
