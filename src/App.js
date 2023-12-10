@@ -12,8 +12,11 @@ import { FaAmilia } from 'react-icons/fa'
 import TopBar from './Componants/TopBar';
 import MyOffcanvas from './Componants/MyOffcanvas';
 import Login from './Componants/Login';
+import { useSelector } from 'react-redux';
+import ProtectedRoute from './Componants/ProtectedRoute';
 
 function App() {
+  const { isLogin } = useSelector((state) => state)
   return (
     <div>
       {/* <MyFoem/> */}
@@ -23,7 +26,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/app' element={<MyOffcanvas />} >
+          <Route path='/app' element={
+            <ProtectedRoute isLogin={isLogin}>
+              <MyOffcanvas />
+            </ProtectedRoute>
+          } >
             <Route path='home' element={<Home />} />
             <Route path='about' element={<About />} />
             <Route path='contact' element={<Contact />} />
