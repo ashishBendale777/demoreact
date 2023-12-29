@@ -14,16 +14,20 @@ import MyOffcanvas from './Componants/MyOffcanvas';
 import Login from './Componants/Login';
 import { useSelector } from 'react-redux';
 import ProtectedRoute from './Componants/ProtectedRoute';
+import MyOffCan from './Componants/MyOffCan';
 
 function App() {
   const { isLogin } = useSelector((state) => state)
   return (
     <div>
+
+      <MyOffCan/>
+
       {/* <MyFoem/> */}
       {/* <TopBar/> */}
       {/* <MyStudentList /> */}
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/app' element={
@@ -36,7 +40,7 @@ function App() {
             <Route path='contact' element={<Contact />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
